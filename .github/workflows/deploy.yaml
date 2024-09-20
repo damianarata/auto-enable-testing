@@ -35,7 +35,6 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.TOKEN }}"
           MERGE_METHOD: "squash"
           MERGE_COMMIT_MESSAGE: "pull-request-title"
-          MERGE_REQUIRED_APPROVALS: "1"
           UPDATE_METHOD: "rebase"
       - name: feedback
         if: ${{ steps.automerge.outputs.mergeResult == 'merged' }}
